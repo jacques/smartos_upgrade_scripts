@@ -1,6 +1,6 @@
 # SmartOS Upgrade Scripts
 
-These scripts are run from the SmartOS Global Zone.  Please not that I have not tested this on SmartDataCenter,
+These scripts are run from the SmartOS Global Zone.  Please note that I have not tested this on SmartDataCenter,
 just the vanilla SmartOS releases.
 
 ## 20130515
