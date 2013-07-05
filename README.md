@@ -6,7 +6,7 @@ just the vanilla SmartOS releases.
 ## 20130515
 
 Fixes the following issues:
-
+ * OS-2175 have mdata:fetch write out new /etc/resolv.conf if required data is in metadata.
  * OS-2194 allow resolvers to be an empty array and in that case, write resolv.conf with no 'nameserver' lines.
 
    If using Chef it goes into maintenance as it cannot collect the cookbooks to regenerate.  Seemed better to run
