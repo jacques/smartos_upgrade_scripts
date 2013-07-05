@@ -8,6 +8,12 @@
  
 export PS4='[\D{%FT%TZ}] ${BASH_SOURCE}:${LINENO}: ${FUNCNAME[0]:+${FUNCNAME[0]}(): }'
 set -o xtrace
+
+ZONENAME=$(zonename)
+if [[ $ZONENAME != "global" ]]; then
+  echo "This script needs to run from the global zone."
+  exit 1
+fi
  
 for zone in $(vmadm list -H -o uuid)
 do
