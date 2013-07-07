@@ -14,7 +14,10 @@ if [[ $ZONENAME != "global" ]]; then
   echo "This script needs to run from the global zone."
   exit 1
 fi
- 
+
+#
+# Fix resolvers and search domain
+#
 for zone in $(vmadm list -H -o uuid)
 do
   echo "Fixing ${zone}"
