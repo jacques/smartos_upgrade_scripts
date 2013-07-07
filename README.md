@@ -13,6 +13,14 @@ Fixes the following issues:
    a upgrade script via the Global Zone to fix this.  The commit that breaks this is: 
    https://github.com/joyent/smartos-live/commit/419670606aed7e7f7f9bc0ac78708b2b3bfe88b8
 
+## 20130613
+
+Workaround for ntp in maintenance:
+ * OS-2135 /etc/rtc_config contains evil
+
+   If using chef in the Global Zone you can just hook in a recipe for ntp and check on the status before executing
+   ntpdate and then clearing the service in maintenance.
+
 # License
 
 ```
